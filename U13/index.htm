@@ -50,20 +50,19 @@ a:hover {color: #53CFC9;}
 <h1>Mobile world Station</h1>
 
 <script>
-
 //Time of day message script- by javascriptkit.com
 //Visit JavaScript Kit (http://javascriptkit.com) for script
+//Modified by Neil Wickham
 //Credit must stay intact for use
-
 var Digital=new Date()
 var hours=Digital.getHours()
-
 //Configure message below to your own.
-if (hours>=5&&hours<=11) //MESSAGE FOR MORNING
-document.write('<b>Welcome to our site. Good morning visitor.</b>')
-else if (hours==12) //MESSAGE FOR NOON
-document.write('<b>It is high noon. Thanks for dropping by!</b>')
-
+if (hours>=0&&hours<=12) //MESSAGE FOR MORNING (00:00-11:59)
+document.write('<b>Good Morning, welcome to our website.</b>')
+else if (hours>12&&hours<=17) //MESSAGE FOR AFTERNOON (12:01-17:00)
+document.write('<b>Good Afternoon, welcome to our website.</b>')
+else //MESSAGE FOR THE REST OF THE DAY (17:00-23:59)
+document.write('<b>Good Evening, welcome to our website.</b>')
 </script>
 
 <p>Hello, welcome to Mobile World Station, where we promote mobile phones, accessories and services. 
